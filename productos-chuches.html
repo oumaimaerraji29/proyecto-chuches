@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Oumaima Erraji">
+    <meta name="description"
+        content="¡Bienvenido al Dulce Capricho, tu destino en línea para satisfacer tus antojos dulces! Somos una tienda virtual especializada en ofrecerte una amplia variedad de chuches y golosinas irresistibles que despertarán tu lado más goloso." />
+    <meta name="keywords" content="Golosinas, Chuches, Caramelo, Regaliz, Tartas de chuches">
+    <!----Icono Flaticon---->
+    <link rel="icon" type="image/png" href="/imagenes/iconoflaticon.png">
+    <!-----CSS BOOTSTRAP---->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!------FONT AWESOME------>
+    <script src="https://kit.fontawesome.com/e1b4bb6642.js" crossorigin="anonymous"></script>
+    <!----CSS OUMAIMA---->
+    <link rel="stylesheet" href="/chuches.css">
+    <title>Tienda Online El Dulce Capricho</title>
+</head>
+
+<body>
+
+    <div class="overlay" data-overlay></div>
+
+    <!--------------------------------------------------------- ALERTA DE SUSCRIBETE------------------------------------------------------------------>
+
+    <div class="container-fluid modal" data-modal>
+
+        <div class="modal-close-overlay" data-modal-overlay></div>
+
+        <div class="modal-content">
+
+            <button class="modal-close-btn" data-modal-close>
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="newsletter-img">
+                <img src="/imagenes/state bake sale fair!.png" alt="newsletter" width="400" height="400">
+            </div>
+
+            <div class="newsletter">
+
+                <!---------Form------------->
+                <form action="#">
+
+                    <div class="newsletter-header">
+
+                        <h3 class="newsletter-title">Suscribete al boletín de noticias.</h3>
+
+                        <p class="newsletter-desc">
+                            Suscribete al <b>Dulce Capricho</b> para recibir información actualizada sobre los últimos
+                            productos y descuentos.
+                        </p>
+                    </div>
+
+                    <input type="email" name="email" class="email-field" placeholder="Correo Electronico" required>
+
+                    <button type="submit" class="btn-newsletter">Unete</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!--------------------------------------------------------FINAL DE SUSCRIBETE------------------------------------------------------------------>
+    <!--------------------------------------------------------- NOTIFICACION POP ABAJO------------------------------------------------------------->
+
+    <div class="notification-toast" data-toast>
+
+        <button class="toast-close-btn" data-toast-close>
+            <ion-icon name="close-outline"></ion-icon>
+        </button>
+
+        <div class="toast-banner">
+            <img src="/imagenes/trans-cake.png" alt="tarta chuches" width="80" height="70">
+        </div>
+
+        <div class="toast-detail">
+
+            <p class="toast-message">
+                Alguien en nuevo acaba de comprar
+            </p>
+
+            <p class="toast-title">
+                Tarta de chuches
+            </p>
+
+            <p class="toast-meta">
+                <time datetime="PT2M">5 Minutes</time> hace
+            </p>
+        </div>
+    </div>
+    <!------------------------------------------------------ FINAL DE LA POP --------------------------------------------------------------------->
+    <!--------------------------------------------------------- HEADER --------------------------------------------------------------------------->
+    <header class="container-fluid">
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #e3f2fd;">
+            <div class="container-fluid">
+                <img  id="logoo" src="/imagenes/El_dulce_ca-removebg-preview.png" alt="Logo"
+                    class="d-inline-block align-text-top logo">
+                <!-- <a class="navbar-brand marka" href="/chuches.html"><i>El Dulce Capricho</i></a> -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse list" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item obj">
+                            <a class="nav-link active" aria-current="page" href="/chuches.html">Inicio</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="/productos-chuches.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                             Tienda
+                            </a>
+                            <ul class="dropdown-menu">
+                           <li><a class="dropdown-item" href="/productos-chuches.html">Todos los Productos</a></li>
+                              <li><a class="dropdown-item" href="#">Sin Azucar</a></li>
+                              <li><a class="dropdown-item" href="#">Sin Gluten</a></li>
+                              <li><a class="dropdown-item" href="#">Sin Lactosa</a></li>
+                              <li><a class="dropdown-item" href="#">Para Veganos</a></li>
+                            </ul>
+                          </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/sobre-nosotros.html">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contacto.html">Contacto</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+
+                <form class="d-flex forbusc" role="search">
+                    <input class="form-control me-2 busc" type="search" placeholder="Busca tu producto"
+                        aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+
+
+                <div class="user-interactions">
+                    <div class="cart cart-item">
+                        <img src="/imagenes/carrito-de-compras.png" class="cart-icon" alt="">
+                    </div>
+                    <div class="user">
+                        <img src="/imagenes/usuario.png" class="user-icon" alt="">
+                    </div>
+                    <div class="corazon">
+                        <img src="/imagenes/corazon.png" class="corazon-icon" alt="">
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-------------------------- FINAL HEADER---------------------------------------------------------------->
+    <main>
+        <!----PRODUCTOS---->
+        <div class="container-fluid khamsat contenedor-items">
+            <div class="card ba-1 item" style="width: 18rem;">
+                <img src="/imagenes/regaliz zara.jpg" class="card-img-top img-item" alt="Regaliz zara">
+                <div class="card-body">
+                    <h5 class="card-title titulo-item">REGALIZ ZARA NATURAL 100 UNIDADES.</h5>
+                    <p class="card-text precio-item">13,75 €</p>
+                    <a href="#" class="btn btn-primary add-to-cart-button boton-item">Añadir al carrito</a>
+                    <a href="#" class="btn btn-primary add-to-favorites-button boton-item">Agregar a favoritos</a>
+                </div>
+            </div>
+
+
+
+            <div class="card ba-2 item" style="width: 18rem;">
+                <img src="/imagenes/porros.jpg" class="card-img-top img-item" alt="chuche porro">
+                <div class="card-body">
+                    <h5 class="card-title titulo-item">PUROS HABANEROS DE CHOCOLATE INTERDULCES 20 UNIDADES.</h5>
+                    <p class="card-text precio-item">12,95 €</p>
+                    <a href="#" class="btn btn-primary add-to-cart-button boton-item">Añadir al carrito</a>
+                </div>
+            </div>
+
+
+            <div class="card ba-3 item" style="width: 18rem;">
+                <img src="/imagenes/algodon-de-azucar-sabor-fresa-24u.jpg" class="card-img-top img-item" alt="Algodon de azucar">
+                <div class="card-body">
+                    <h5 class="card-title titulo-item">BORGAT ALGODÓN DE AZÚCAR SABOR FRESA 24U.</h5>
+                    <p class="card-text precio-item">13,95 €</p>
+                    <a href="#" class="btn btn-primary add-to-cart-button boton-item">Añadir al carrito</a>
+                </div>
+            </div>
+
+
+            <div class="card ba-4 item" style="width: 18rem;">
+                <img src="/imagenes/izy-vape-mango-pack-5u.jpg" class="card-img-top img-item" alt="vape mango">
+                <div class="card-body">
+                    <h5 class="card-title titulo-item">IZY VAPE MANGO PACK 5U.</h5>
+                    <p class="card-text precio-item">34,95 €</p>
+                    <a href="#" class="btn btn-primary add-to-cart-button boton-item">Añadir al carrito</a>
+                </div>
+            </div>
+
+
+            <div class="card ba-5 item" style="width: 18rem;">
+                <img src="/imagenes/caramelos-sugus-de-varios-sabores-bolsa-1-kg.jpg" class="card-img-top img-item"
+                    alt="caramelos sugus">
+                <div class="card-body">
+                    <h5 class="card-title titulo-item">CARAMELOS SUGUS DE VARIOS SABORES BOLSA 1 KG.</h5>
+                    <p class="card-text precio-item">10,95 €</p>
+                    <a href="#" class="btn btn-primary add-to-cart-button boton-item">Añadir al carrito</a>
+                </div>
+            </div>
+
+            <div class="card ba-6 item" style="width: 18rem;">
+                <img src="/imagenes/ojos-de-trolli-rellenos-bote-85u.jpg" class="card-img-top img-item"
+                    alt="caramelos sugus">
+                <div class="card-body">
+                    <h5 class="card-title titulo-item">OJOS DE TROLLI RELLENOS BOTE 85U.</h5>
+                    <p class="card-text precio-item">30,20 €</p>
+                    <a href="#" class="btn btn-primary add-to-cart-button boton-item">Añadir al carrito</a>
+                </div>
+            </div>
+
+            <div class="card ba-7 item" style="width: 18rem;">
+                <img src="/imagenes/chicles-burguer-rellenos-fini-200u.jpg" class="card-img-top img-item"
+                    alt="caramelos sugus">
+                <div class="card-body">
+                    <h5 class="card-title titulo-item">CHICLES FINI BURGER 200U.</h5>
+                    <p class="card-text precio-item">11,75 €</p>
+                    <a href="#" class="btn btn-primary add-to-cart-button boton-item">Añadir al carrito</a>
+                </div>
+            </div>
+
+            <div class="card ba-8 item" style="width: 18rem;">
+                <img src="/imagenes/lenguas-fini-fresa-envueltas-sin-gluten-125u.jpg" class="card-img-top img-item"
+                    alt="caramelos sugus">
+                <div class="card-body">
+                    <h5 class="card-title titulo-item">Regaliz Fini Lenguas fresa envueltas sin glúten 125u.</h5>
+                    <p class="card-text precio-item">22,95 €</p>
+                    <a href="#" class="btn btn-primary add-to-cart-button boton-item">Añadir al carrito</a>
+                </div>
+            </div>
+
+            <div class="card ba-9 item" style="width: 18rem;">
+                <img src="/imagenes/ramo-de-flores-de-golosinas-grande-s300.jpg" class="card-img-top img-item"
+                    alt="caramelos sugus">
+                <div class="card-body">
+                    <h5 class="card-title titulo-item">RAMO DE FLORES DE GOLOSINAS GRANDE 310GR.</h5>
+                    <p class="card-text precio-item">15,95 €</p>
+                    <a href="#" class="btn btn-primary add-to-cart-button boton-item">Añadir al carrito</a>
+                </div>
+            </div>
+
+
+            <div class="card ba-10 item" style="width: 18rem;">
+                <img src="/imagenes/tarta-de-chuches-2000gr.jpg" class="card-img-top img-item"
+                    alt="caramelos sugus">
+                <div class="card-body">
+                    <h5 class="card-title titulo-item">TARTA DE CHUCHES 2000 GR.</h5>
+                    <p class="card-text precio-item">49,95 €</p>
+                    <a href="#" class="btn btn-primary add-to-cart-button boton-item">Añadir al carrito</a>
+                </div>
+            </div>
+
+
+
+            <div class="card ba-11 item" style="width: 18rem;">
+                <img src="/imagenes/pringles-sour-cream-onion-40g-12u.jpg" class="card-img-top img-item"
+                    alt="caramelos sugus">
+                <div class="card-body">
+                    <h5 class="card-title titulo-item">PRINGLES SOUR CREAM & ONION 40G. 12U.</h5>
+                    <p class="card-text precio-item">14,20 €</p>
+                    <a href="#" class="btn btn-primary add-to-cart-button boton-item">Añadir al carrito</a>
+                </div>
+            </div>
+
+
+            <div class="card ba-12 item" style="width: 18rem;">
+                <img src="/imagenes/conguitos-cups-16u.jpg" class="card-img-top img-item"
+                    alt="caramelos sugus">
+                <div class="card-body">
+                    <h5 class="card-title titulo-item">Conguitos Cups 16u.</h5>
+                    <p class="card-text precio-item">13,75 €</p>
+                    <a href="#" class="btn btn-primary add-to-cart-button boton-item">Añadir al carrito</a>
+                </div>
+            </div>
+        </div>
+
+<!--------------->
+<div class="carrito">
+    <h2>Carrito de compras</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Cantidad</th>
+          <th>Precio</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">Total:</td>
+          <td class="total-precio">0,00 €</td>
+          <td></td>
+        </tr>
+      </tfoot>
+    </table>
+    <button class="btn btn-primary pagar-button">Pagar</button>
+  </div>
+
+
+
+
+
+    </main>
+
+
+    <!-------------------------------- NEWSTELLER -------------------------------------------------------------->
+    <div class="newsletter correo">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="content">
+                        <h2>SUSCRIBETE AHORA</h2>
+                        <h6 class="content-tuned">Suscríbete a nuestro boletín de noticias y a las futuras
+                            actualizaciones</h6>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter email to subscribe">
+                            <span class="input-group-btn">
+                                <button class="btn" type="submit">suscribete ahora</button>
+
+
+                        </div>
+                        <div class="text-center">
+
+                            <a class="unsubscribe-link" href="#">¿Quieres darte de baja?</a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------------------------ FINAL NEWSTELLER ------------------------------------>
+
+    <!------------------------- FOOTER ------------------------------------------------->
+    <div class="container foot">
+        <footer class="py-3 my-4">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Inicio</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Productos</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Sobre Nosotros</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Contacto</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Preguntas Frecuentes</a></li>
+            </ul>
+            <p class="text-center text-body-secondary">&copy; 2023 El Dulce Capricho</p>
+        </footer>
+    </div>
+
+    <!------------------------- FINAL DEL FOOTER ---------------------------------------->
+
+    <!----------SCRIPT BOOTSTRAP------>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+    <!-----BOOTSTRAP OUMAIMA------>
+    <script src="/chuches.js"></script>
+</body>
+
+</html>
